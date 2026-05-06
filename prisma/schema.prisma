@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ProjectStage {
+  idea
+  building
+  private_beta
+  public_beta
+  launched
+}
+
+model WaitlistEntry {
+  id                 String       @id @default(uuid())
+  email              String       @unique
+  projectName        String
+  projectStage       ProjectStage
+  twitterHandle      String?
+  projectDescription String?
+  hypeScore          Int?
+  source             String?
+  referrer           String?
+  utmSource          String?
+  utmMedium          String?
+  utmCampaign        String?
+  createdAt          DateTime     @default(now())
+
+  @@map("waitlist_entries")
+}
+
