@@ -13,11 +13,14 @@ export const metadata: Metadata = {
     title: "Public Journey — One page for your SaaS journey.",
     description: "Show your progress, roadmap, updates and waitlist in one public project page.",
     type: "website",
+    url: "https://public-journey.vercel.app",
+    siteName: "Public Journey",
   },
   twitter: {
     card: "summary_large_image",
     title: "Public Journey — One page for your SaaS journey.",
     description: "Show your progress, roadmap, updates and waitlist in one public project page.",
+    creator: "@publicjourney",
   },
 };
 
